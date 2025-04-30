@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    top: 0;
+}
+body{
+    background-color: rgb(8, 46, 80);    
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: black;
+}
+div#res{
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+}
+div#botoes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "limpar" "remover" "divisao" "multiplicacao"
+    "sete"   "oito"    "nove"    "subtracao"
+    "quatro" "cinco"   "seis"    "somar"
+    "tres"   "dois"    "um"      "igual"
+    "zero"   "zero"    "ponto"   "igual"
+    ;
+    gap: 10px;
+}
+.bottom{
+    background-color: aquamarine;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#limpar_tela{
+    grid-area: limpar;
+}
+#remove_numero{
+    grid-area: remover;
+}
+#div{
+    grid-area: divisao;
+}
+#mult{
+    grid-area: multiplicacao;
+}
+#sete{
+    grid-area: sete;
+}
+#oito{
+    grid-area: oito;
+}
+#nove{
+    grid-area: nove;
+}
+#sub{
+    grid-area: subtracao;
+}
+#quatro{
+    grid-area: quatro;
+}
+#cinco{
+    grid-area: cinco;
+}
+#seis{
+    grid-area: seis;
+}
+#som{
+    grid-area: somar;
+}
+#tres{
+    grid-area: tres;
+}
+#dois{
+    grid-area: dois;
+}
+#um{
+    grid-area: um;
+}
+#igual{
+    grid-area: igual;
+}
+#zero{
+    grid-area: zero;
+}
+#ponto{
+    grid-area: ponto;
+}
