@@ -7,31 +7,35 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <section>
-        <div id="res">
-
-        </div>
-
+    <main class="calculadora">
+        <div id="res" aria-label="Resultado da conta" role="textbox"></div>
+    
         <div id="botoes">
-            <button class="bottom" value="limpar_tela" id="limpar_tela"> C </button>
-            <button class="bottom" value="remove_numero" id="remove_numero"> > </button>
-            <button class="bottom" value="divisao" id="div"> / </button>
-            <button class="bottom" value="multiplicacao" id="mult"> X </button>
-            <button class="bottom" value="sete" id="sete"> 7 </button>
-            <button class="bottom" value="oito" id="oito"> 8 </button>
-            <button class="bottom" value="nove" id="nove"> 9 </button>
-            <button class="bottom" value="subtracao" id="sub"> - </button>
-            <button class="bottom" value="quatro" id="quatro"> 4 </button>
-            <button class="bottom" value="cinco" id="cinco"> 5 </button>
-            <button class="bottom" value="seis" id="seis"> 6 </button>
-            <button class="bottom" value="somar" id="som"> + </button>
-            <button class="bottom" value="tres" id="tres"> 3 </button>
-            <button class="bottom" value="dois" id="dois"> 2 </button>
-            <button class="bottom" value="um" id="um"> 1 </button>
-            <button class="bottom" value="igualar" id="igual"> = </button>
-            <button class="bottom" value="zero" id="zero"> 0 </button>
-            <button class="bottom" value="ponto" id="ponto"> . </button>
+          <button class="botao" value="C" id="limpar_tela" aria-label="Limpar tela">C</button>
+          <button class="botao" value="←" id="remove_numero" aria-label="Remover número" onclick="LimparNumero()">←</button>
+          <button class="botao" value="/" id="div" aria-label="Dividir" onclick="operacoes('/')">/</button>
+          <button class="botao" value="*" id="mult" aria-label="Multiplicar" onclick="operacoes('*')">×</button>
+    
+          <button class="botao" value="7" id="sete" onclick="MostrarNumero(7)">7</button>
+          <button class="botao" value="8" id="oito" onclick="MostrarNumero(8)">8</button>
+          <button class="botao" value="9" id="nove" onclick="MostrarNumero(9)">9</button>
+          <button class="botao" value="-" id="sub" onclick="operacoes('-')">−</button>
+    
+          <button class="botao" value="4" id="quatro" onclick="MostrarNumero(4)">4</button>
+          <button class="botao" value="5" id="cinco" onclick="MostrarNumero(5)">5</button>
+          <button class="botao" value="6" id="seis" onclick="MostrarNumero(6)">6</button>
+          <button class="botao" value="+" id="som" onclick="operacoes('+')">+</button>
+    
+          <button class="botao" value="1" id="um" onclick="MostrarNumero(1)">1</button>
+          <button class="botao" value="2" id="dois" onclick="MostrarNumero(2)">2</button>
+          <button class="botao" value="3" id="tres" onclick="MostrarNumero(3)">3</button>
+          <button class="botao igual" value="=" id="igual" onclick="calcular()">=</button>
+    
+          <button class="botao zero" value="0" id="zero" onclick="MostrarNumero(0)">0</button>
+          <button class="botao" value="." id="ponto">.</button>
         </div>
-    </section>
+      </main>
+
+      <script src="script.js"></script>
 </body>
 </html>

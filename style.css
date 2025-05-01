@@ -1,94 +1,76 @@
-*{
+* {
     margin: 0;
-    top: 0;
-}
-body{
-    background-color: rgb(8, 46, 80);    
+    padding: 0;
+    box-sizing: border-box;
 }
 
-section {
+body {
+    background-color: rgb(106, 106, 106);
+    font-family: Arial, sans-serif;
+}
+
+main.calculadora {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 15px;
+    padding: 20px;
     background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
-div#res{
-    height: 40px;
+
+#res {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 60px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     background-color: aliceblue;
+    font-size: 24px;
+    padding: 10px;
+    text-align: right;
+    overflow-x: auto;
+    border-radius: 5px;
 }
-div#botoes{
+
+#botoes {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-    "limpar" "remover" "divisao" "multiplicacao"
-    "sete"   "oito"    "nove"    "subtracao"
-    "quatro" "cinco"   "seis"    "somar"
-    "tres"   "dois"    "um"      "igual"
-    "zero"   "zero"    "ponto"   "igual"
-    ;
+    grid-template-columns: repeat(4, 60px);
     gap: 10px;
+    justify-content: center;
 }
-.bottom{
-    background-color: aquamarine;
-    width: 30px;
-    height: 30px;
+
+.botao {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
     border-radius: 50%;
+    border: none;
+    background-color: rgb(59, 59, 59);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
-#limpar_tela{
-    grid-area: limpar;
+
+.botao:hover {
+    background-color: rgb(229, 229, 229);
 }
-#remove_numero{
-    grid-area: remover;
+
+.igual {
+    height: 100%;
+    background-color: orange;
+    color: white;
 }
-#div{
-    grid-area: divisao;
+
+.igual:hover {
+    background-color: rgb(179, 98, 0);
 }
-#mult{
-    grid-area: multiplicacao;
-}
-#sete{
-    grid-area: sete;
-}
-#oito{
-    grid-area: oito;
-}
-#nove{
-    grid-area: nove;
-}
-#sub{
-    grid-area: subtracao;
-}
-#quatro{
-    grid-area: quatro;
-}
-#cinco{
-    grid-area: cinco;
-}
-#seis{
-    grid-area: seis;
-}
-#som{
-    grid-area: somar;
-}
-#tres{
-    grid-area: tres;
-}
-#dois{
-    grid-area: dois;
-}
-#um{
-    grid-area: um;
-}
-#igual{
-    grid-area: igual;
-}
-#zero{
-    grid-area: zero;
-}
-#ponto{
-    grid-area: ponto;
+
+.zero {
+    grid-column: span 2;
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+    border-radius: 30px;
 }
