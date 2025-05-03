@@ -1,31 +1,28 @@
 let res = document.getElementById("res")
 let valor = []
-let resultado = []
-
-function MostrarNumero(n){
-    valor += n
-    res.innerHTML = valor
-}
+resultado = ''
 
 function operacoes(n){
-    valor += n
-    res.innerHTML = valor
+    valor.push(n)
+    res.innerHTML = valor.join('')
 }
 
 function calcular(){
-    resultado = eval(valor)
+    resultado = eval(valor.join(''))
     res.innerHTML = resultado
-    valor = resultado.toString()
+    resultado.toString().split('')
+    console.log(resultado)
+    valor = [resultado]
+    
 }
 
 function LimparNumero(){
-    let ultimoN = valor[valor.length - 1]
-    // valor.splice(ultimoN, 1)
-    res.innerHTML = valor
+    valor.pop()
+    res.innerHTML = valor.join('')
 }
 function LimparTela(){
     res.innerHTML = ''
-    valor = ''
+    valor = []
 
 }
 function test(){
