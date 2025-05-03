@@ -11,7 +11,7 @@
         <div id="res" aria-label="Resultado da conta" role="textbox"></div>
     
         <div id="botoes">
-          <button class="botao" value="C" id="limpar_tela" aria-label="Limpar tela">C</button>
+          <button class="botao" value="C" id="limpar_tela" aria-label="Limpar tela" onclick="LimparTela()">C</button>
           <button class="botao" value="←" id="remove_numero" aria-label="Remover número" onclick="LimparNumero()">←</button>
           <button class="botao" value="/" id="div" aria-label="Dividir" onclick="operacoes('/')">/</button>
           <button class="botao" value="*" id="mult" aria-label="Multiplicar" onclick="operacoes('*')">×</button>
@@ -32,7 +32,7 @@
           <button class="botao igual" value="=" id="igual" onclick="calcular()">=</button>
     
           <button class="botao zero" value="0" id="zero" onclick="MostrarNumero(0)">0</button>
-          <button class="botao" value="." id="ponto">.</button>
+          <button class="botao" value="." id="ponto" onclick="test()">.</button>
         </div>
       </main>
 

@@ -1,5 +1,6 @@
 let res = document.getElementById("res")
 let valor = []
+let resultado = []
 
 function MostrarNumero(n){
     valor += n
@@ -12,12 +13,21 @@ function operacoes(n){
 }
 
 function calcular(){
-    let resultado = eval(valor)
+    resultado = eval(valor)
     res.innerHTML = resultado
     valor = resultado.toString()
 }
 
 function LimparNumero(){
     let ultimoN = valor[valor.length - 1]
-    valor.splice(2, 1)
+    // valor.splice(ultimoN, 1)
+    res.innerHTML = valor
+}
+function LimparTela(){
+    res.innerHTML = ''
+    valor = ''
+
+}
+function test(){
+    console.log(resultado)
 }
