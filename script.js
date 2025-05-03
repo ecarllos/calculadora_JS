@@ -8,12 +8,17 @@ function operacoes(n){
 }
 
 function calcular(){
-    resultado = eval(valor.join(''))
-    res.innerHTML = resultado
-    resultado.toString().split('')
-    console.log(resultado)
-    valor = [resultado]
-    
+    if (valor.length == 0){
+        alert("digite um número!")
+    }else{
+        let expressao = valor.join('')
+        let resultadoNumerico = eval(expressao)
+
+        res.innerHTML = resultadoNumerico
+
+        valor = resultadoNumerico.toString().split('').map(Number);        
+    }
+
 }
 
 function LimparNumero(){
